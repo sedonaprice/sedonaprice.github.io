@@ -1,7 +1,8 @@
 Sedona Price
 ===============
+
 Grad Student, something
------------------------
+---------------
 
 
 ## Testing startup
