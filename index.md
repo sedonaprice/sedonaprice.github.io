@@ -1,3 +1,9 @@
-## Sedona Price
+Sedona Price
+===============
+Grad Student, something
+-----------------------
 
-Testing startup
+
+## Testing startup
+
+Should finish this. Hmm, *testing*.
