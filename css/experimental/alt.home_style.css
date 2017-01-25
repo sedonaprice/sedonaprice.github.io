@@ -1,0 +1,155 @@
+body,html{
+	background-color: #000
+	text-align: center;
+}
+body {
+/*      padding-left: 12em;*/
+      font-family: Georgia, "Times New Roman",
+              Times, serif;
+      color: purple;
+      background-color: #c6baff }
+#main {
+	color: black;
+	margin: auto;
+	border: solid 1px #fff;
+	width: 800px;
+/*	background-color: #d8ddcc;*/
+}
+#bordered {
+	border: solid black 1px;
+	margin: 10px;
+	text-align: center;
+}
+.section {
+	padding: 1px 20px 20px 20px;
+	margin-top: 1px;
+}
+#banner{ height: 200px;
+background-image: url(http://sedona.phys.uaf.edu/~sedona/sedona_website_banner_berkeley.gif);
+background-position: 0px 0px; background-repeat: no-repeat; }
+
+#header {
+	margin: auto;
+	width: 800px;
+	text-align: left;
+	background-color: #9370d8; /*#c6baff;*/
+}
+#header h1,h2,h5 {
+	font-family: Georgia, serif;
+	font-weight: normal;
+	margin: 0;
+}
+#header h1 { font-size: 2.2em; padding: 30px 20px 0 0px; text-align: center; }
+#header h2 { font-size: 1.6em; padding: 20px 20px 0 100px; }
+#header h5 { font-size: 1.em; padding: 20px 20px 10px 100px; text-align: center; }
+#sidebar {
+	width: 150px;
+	margin: auto;
+	margin-left: -330px;
+	padding: 0 45px 0 0;
+	text-align: left;
+	float: left;
+}
+#content {
+	border-top: solid 1px #fff;
+	width: 600px;
+	min-height: 500px;
+	text-align: left;
+	margin: auto;
+	padding-left: 200px;
+	background: #d7beff;	
+}
+.text {
+	margin: auto;
+	text-align: left;
+	float: right;
+/*	float: top;*/
+	top: -440px;
+	padding: 0 0 0 200px;
+}
+#footer {
+	height: 35px;
+	width: 800px;
+/*	margin: 0;*/
+	margin: auto;
+	padding: 0;
+	background: #d6aeda;
+	color: black;
+	text-align: center;
+	border-top: solid 1px #fff;
+	font-size: 0.8em;
+	font-style: italic;
+	line-height: 1em;
+}
+#footer p {
+	margin: 4px 0 0 0;
+}
+font.head {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+font.subhead {
+	font-weight: bold;
+	font-size: 1.15em;
+}
+  ul.navbar {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+/*     position: absolute;
+     top: 2em;
+     left: 1em;*/
+     width: 150px; }
+  h1 {
+      font-family: SunSans-Regular, sans-serif }
+h1,h2 {
+	padding-top: 10px;
+}
+  ul.navbar li {
+/*    background: #dcdaff;*/
+    width: 150px;
+    text-align: center;
+    margin: auto;
+/*    margin: 10px 0;*/
+    padding: 8em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-right: 4px none #46008a }
+ul.subnavbar {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+ul.subnavbar li {
+	width: 150px;
+	text-align: left;
+	background: #dcdaff;
+	margin: 10px 0;
+	padding: 6px;
+/*	padding-left: 9px;*/
+	border-right: 5px solid #46008a;
+}
+  ul.navbar a {
+    text-decoration: none }
+ul.subnavbar li a:hover {
+        background: #bc9dd1; /*#b2a3fb;*/
+        text-decoration:none;
+        border-bottom:0px;
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 8px;
+-moz-border-radius-bottomright: 0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 0px 8px 0px 0px;
+border-radius: 0px 8px 0px 0px;
+}
+  a:link {
+    color: blue }
+  a:visited {
+    color: purple }
+  a:hover {
+    color: #b0007b }
+  address {
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted }

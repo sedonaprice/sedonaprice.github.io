@@ -1,0 +1,44 @@
+/*
+
+Colors in use (from the original home style dark):
+
+background color: #8989a1  / 
+header background: #382353 / 
+text color: #303030 / black
+border color: #ffffff / white
+content background: #eadeff / 
+footer background: #503c69 / 
+footer text: #dadada / 
+navbar background: #c3a3e0 / 
+navbar link color: #600060 / 
+navbar hover color: #003377 / 
+navbar hover text: #ffffff / white
+subnavbar background: #b2a3fb / 
+subnavbar text: #303030 / black
+subnavbar hover: #5e50a3 / 
+subnavbar hover text: # ffffff / white
+
+
+simplified colors (to change to):
+
+************************************
+The colors now used:
+
+background color: 
+content background: #f8f8f8 ;#e6e3ec ; #E7E2F1
+footer text: #505050
+
+# update!!
+navbar background color: #003377
+navbar link color: #ffffff
+navbar hover: #5d6ab3
+navbar hover text: #ffffff
+
+
+links:
+link: #800080 / 
+visited: #42005c / 
+hover: border-bottom: solid 2px #46008a /
+
+*/
+

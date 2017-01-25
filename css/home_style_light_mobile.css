@@ -1,0 +1,288 @@
+/* home_style_light_mobile.css */
+/* colors:
+#1f6bc2; dark blue
+#113d88; dark purple
+#c8b0de; light purple
+*/
+
+body,html{
+	text-align: center;
+	font-size:1em;
+        height: auto !important;
+	height: 100%
+	min-height: 100%
+	width: 100%
+}
+body {
+      font-family: sans-serif;
+      color: #303030;
+      background-color: #b8baba;
+}
+#main { color: #303030; margin: auto;}
+
+.section { padding: 0; 	margin-top: 1px; }
+
+#bannerbox{ display: none; max-width:800px; margin-top:0px; margin-bottom:-4px; }
+
+#banner_normal{ display: none; max-width:800px; margin-top:0px; margin-bottom:-4px; }
+
+#banner_nopic{ display: none; max-width:800px; margin-top:0px; margin-bottom:-4px; }
+
+#banner_mobile{
+        margin: auto;
+        text-align: left;
+        border-bottom: solid 4px #0054b4;
+        background-color: #f8fafa;
+        color: #313131;
+        padding: 0px 0px 15px 0px;
+}
+
+#banner_mobile h1{
+        font-family: "trebuchet ms", sans-serif;
+	font-weight: normal;
+        margin: 0;
+        padding: 15px 0px 5px 25px;
+        text-align: left;
+}
+
+#banner_mobile h2,h4,h5{
+        font-family: "trebuchet ms", "Gill Sans", sans-serif;
+	font-weight: normal;
+        margin: 0;
+        padding: 0px 0px 0px 25px;
+}
+
+
+#header {
+	margin: auto;
+	text-align: left;
+	border-bottom: solid 4px #0054b4;
+	background-color: #f8fafa;
+	color: #313131;
+	padding: 0px 0px 15px 0px;
+}
+#header h1 {
+        font-family: "trebuchet ms", sans-serif;
+	margin: 0;
+	padding: 15px 0px 5px 35px;
+	text-align: left;
+}
+#header h2,h4,h5 {
+	font-family: "trebuchet ms", "Gill Sans", sans-serif;
+	margin: 0;
+	padding: 0px 0px 0px 25px;
+}
+#header h4 { padding-bottom: 5px;}
+#header h5 { padding-bottom: 20px; padding-top: 10px;}
+
+#photobox_right {
+	float: right;
+	padding: 10px 20px 10px 10px;
+	text-align: center;
+	font-size: 1em;
+	line-height:13px;
+}
+#photobox_head {
+	float: right;
+	height: 170px;
+	padding: 15px 15px 0px 15px;
+}
+#content {
+	text-align: left;
+	margin: auto;
+        padding-bottom: 1px;
+	background: #f8fafa;
+}
+.text {
+	margin: auto;
+        margin: 0px 10px 10px 10px;
+	text-align: left;
+	padding: 0px 15px 2px 10px;
+        padding-top: 1px; 
+        background-color: #f8fafa;
+}
+
+h1,h2,h3 { padding-top: 10px; 
+font-family: "trebuchet ms", sans-serif; 
+}
+
+#content h4,h5 {padding-left: 0px; padding-top: 0px;
+	font-weight: bold;
+}
+
+#content h4 {font-size: 1.1em;
+	     padding-top: 10px;}
+#content h5 {font-size: 1em;}
+
+#footer {
+	clear: both;
+	height: 3em;
+	margin: auto;
+	padding: 0;
+	padding-top: 2px;
+	border-top: solid 2px #0054b4;
+	background: #f8fafa; 
+	color: #505050;
+	text-align: center;
+        font-family: "Gill Sans", sans-serif;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.2em;
+}
+#footer p {
+	margin: 4px 0 0 0;
+	text-align: center;
+}
+
+/* is this used? */
+font.head { font-weight: bold; font-size: 1.4em; }
+
+/* is this used? */
+font.subhead { font-weight: bold; font-size: 1.15em; }
+
+#sidebar {
+	margin: auto;
+	padding: 0 0px 0 0;
+	text-align: center;
+        font-family: "trebuchet ms", sans-serif;
+        font-weight: bold;
+        font-variant: normal;
+	line-height: 1.4em;
+	float: none;
+	width: 100%;
+	padding: 2px 0px;
+	background: #113d88;
+}
+
+/* navbar not needed for how I've fixed things now */
+  ul.navbar {
+     list-style-type: none;
+     padding: 0px;
+     margin: 0px;
+     width: auto;
+     display: inline;
+}
+
+/* navbar not needed for how I've fixed things now */
+  ul.navbar li {
+    display: inline;
+    width: auto;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.fakesubnavbar {
+	display: inline;
+	width: auto;
+        list-style-type: none;
+        padding: 0;
+	color: #ffffff;/*#600060;*/
+        margin: 0px;
+        background: #113d88;
+}
+ul.fakesubnavbar li {
+        text-align: center;
+        padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+
+ul.subnavbar {
+	list-style-type: none;
+	display: inline;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+ul.subnavbar li {
+	display: inline;
+	width: auto;
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+}
+ul.subnavbar li a {
+	padding: 2px 8px;
+	background: #113d88;
+	border-left: solid #1f6bc2 1px;
+	border-right: solid #1f6bc2 1px;
+	text-decoration:none;
+}
+
+ul.subnavbar li a:link { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }	
+
+ul.subnavbar li a:visited { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subnavbar li a:hover {
+	display: inline;
+        background-color: #3A86DE;
+        /*background-color: #1f6bc2;*/
+	border-right: solid #1f6bc2 1px;
+	border-left: solid #1f6bc2 1px;
+	color: #ffffff;
+	text-decoration:none;
+	border-bottom:0px;
+}
+
+ul.subsubnavbar {
+	display: inline;
+	width: auto;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+	font-size: 88%;
+}
+ul.subsubnavbar li {
+	display: inline;
+        width: auto;
+        text-align: center;
+        padding: 0px;
+	margin: 0;
+}
+ul.subsubnavbar li a {
+        display: inline;
+        width: auto;
+	padding: 2px 8px;
+	background: #113d88;
+	border-right: solid #1f6bc2 1px;
+	border-left: solid #1f6bc2 1px;
+        text-decoration:none;
+}
+
+ul.subsubnavbar li a:link { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subsubnavbar li a:visited { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subsubnavbar li a:hover {
+        background-color: #3A86DE;
+        /*background-color: #1f6bc2;*/
+	border-right: solid #1f6bc2 1px;
+	border-left: solid #1f6bc2 1px;
+	color: #ffffff;
+        text-decoration:none;
+        border-bottom:0px;
+}
+
+
+/* HTML links styling */
+  a:link { color: #1f6bc2; text-decoration:none; } 
+  a:visited { color: #1f6bc2; } /*#800080;*/
+  a:hover { color: #e3a857; }
+
+.fakelink { color: #1f6bc2; }
+
+
+  address { text-align: center; margin-top: 13px; padding-top: 13px; border-top: thin dotted }
+
+span.codedirection { unicode-bidi:bidi-override; direction: rtl; } 
+

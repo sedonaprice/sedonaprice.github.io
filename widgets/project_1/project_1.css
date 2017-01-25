@@ -1,0 +1,41 @@
+#angle-range{float:left;clear:left;width:200px;margin:10px}
+#angle-range .ui-slider-range{background:#72A5E8}
+#angle-range .ui-slider-handle{border-color:steelblue; border-width:2}
+
+
+line, path {
+    stroke: #000;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* tell the SVG path to be a thin blue line without any area fill */
+path[class='plotline'] {
+    stroke: steelblue;
+    stroke-width: 3.5;
+    fill: none;
+}
+
+.circleline circle {
+    stroke: green;
+    stroke-width: 1;
+    opacity: 0.5;
+    fill: none;
+}
+
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+/*.x.axis line, .x.axis path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+}*/

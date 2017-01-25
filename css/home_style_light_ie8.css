@@ -1,0 +1,346 @@
+/* home_style_light_ie8.css */
+/* colors:
+#1f6bc2; dark blue
+#113d88; dark purple
+#c8b0de; light purple
+*/
+
+body,html{
+	text-align: center;
+	font-size:14.5px;
+        height: auto !important;
+        height:100%;
+        min-height:100%;
+}
+body {
+      font-family: sans-serif;
+      color: #303030;
+      background-color: #b8baba;
+}
+#main {
+	color: #303030;
+	margin: auto;
+	max-width: 810px;
+	margin-top: 16px;
+	/*margin-left: 8px;*/
+}
+
+.section { padding: 0; 	margin-top: 1px; }
+
+#bannerbox{ max-width:800px; margin-top:0px; margin-bottom:-4px; }
+
+#banner_normal{
+        margin: auto;
+        text-align: left;
+	min-height: 180px;
+        border-bottom: solid 4px #0054b4;
+        background-color: #f8fafa;
+        color: #313131;
+        padding: 0px 0px 25px 15px;
+}
+
+#banner_normal h1{
+        font-family: "trebuchet ms", sans-serif;
+	font-weight: normal;
+        margin: 0;
+	/*font-size: 30px;*/
+        padding: 47px 0px 5px 30px;
+        /*padding: 45px 0px 5px 40px;*/
+        text-align: left;
+}
+
+#banner_normal h2,h4,h5{
+        font-family: "trebuchet ms", "Gill Sans", sans-serif;
+	font-weight: normal;
+        margin: 0;
+        padding: 0px 0px 0px 65px;
+}
+
+#banner_nopic{
+        margin: auto;
+        text-align: left;
+        border-bottom: solid 4px #0054b4;
+        background-color: #f8fafa;
+        color: #313131;
+        padding: 0px 0px 25px 15px;
+	margin-left: 8px;
+}
+
+#banner_nopic h1{
+        font-family: "trebuchet ms", sans-serif;
+	font-weight: normal;
+        margin: 0;
+	/*font-size: 30px;*/
+        padding: 45px 0px 5px 40px;
+        /*padding: 15px 0px 5px 25px;*/
+        text-align: left;
+}
+
+#banner_nopic h2,h4,h5{
+        font-family: "trebuchet ms", "Gill Sans", sans-serif;
+	font-weight: normal;
+        margin: 0;
+        padding: 0px 0px 0px 65px;
+        /*padding: 0px 0px 0px 45px;*/
+}
+
+#banner_mobile{ display: none; }
+
+#banner{ height: 200px; 
+background-image: url(http://sedona.phys.uaf.edu/~sedona/sedona_website_banner_berkeley.gif);
+background-position: 0px 0px; background-repeat: no-repeat; }
+
+#header {
+	margin: auto;
+	width: 800px;
+	max-height: 200px;
+	text-align: left;
+        border-bottom: solid 4px #0054b4;
+        background-color: #f8fafa;
+        color: #313131;
+}
+#header h1 {
+        font-family: "trebuchet ms", sans-serif;
+	margin: 0;
+	padding: 15px 0px 5px 35px;
+	text-align: left;
+}
+#header h2,h4,h5 {
+	font-family: "trebuchet ms", "Gill Sans", sans-serif;
+	margin: 0;
+	padding: 0px 0px 0px 40px;
+	/*padding: 0px 0px 0px 55px;*/
+}
+#header h4 { padding-bottom: 5px;}
+#header h5 { padding-bottom: 20px; padding-top: 10px;}
+
+#photobox_right {
+	width: 100px;
+	float:right;
+	padding: 10px 20px 10px 10px;
+	text-align: center;
+	font-size: 12px;
+	line-height:13px;
+}
+#photobox_head {
+	float: right;
+	height: 170px;
+	margin-left: -300px;
+	padding: 15px 15px 10px 15px;
+}
+#content {
+	width: 800px;
+	min-height: 282px; 
+	text-align: left;
+	margin: auto;
+        padding-bottom: 1px;
+	background: #f8fafa;
+}
+.text {
+        min-height: 280px;
+        margin: auto;
+        margin: 10px 10px 10px 10px;
+        margin-left: 165px; 
+        text-align: left;
+        padding: 0px 15px 5px 10px;
+        border: none 1px #6f6faf;
+        padding-top: 5px;  
+	padding-bottom: 10px;
+	background-color: #eadeff;
+
+}
+
+h1,h2,h3 { padding-top: 10px; font-family: "trebuchet ms", sans-serif; }
+
+#content h4,h5 {padding-left: 0px; padding-top: 0px;
+	font-weight: bold; 
+}
+
+#content h4 {font-size: 1.1em;
+	     padding-top: 10px;}
+
+#footer {
+	clear: both;
+	height: 35px;
+	width: 800px;
+	margin: auto;
+	padding: 0;
+	padding-top: 2px;
+	border-top: solid 2px #0054b4;
+	background: #f8fafa;
+	color: #505050;
+	text-align: center;
+        font-family: "Gill Sans", sans-serif;
+	font-size: 12.7px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 13px;
+}
+#footer p { margin: 4px 0 0 0; }
+
+font.head { font-weight: bold; font-size: 22.3px; }
+font.subhead { font-weight: bold; font-size: 18.3px; }
+
+#sidebar {
+	width: 130px;
+	margin: auto;
+        margin-top: 10px;
+        margin-left: 20px;
+        padding: 0 0px 0 0;
+	text-align: left;
+        font-family: "trebuchet ms", sans-serif;
+        font-weight: bold;
+        font-variant: normal;
+	float: left;
+	margin-bottom: 10px;
+}
+
+/* navbar not needed for how I've fixed things. */
+  ul.navbar {
+     list-style-type: none;
+     padding: 0;
+     padding-top: 3px;
+     margin: auto;
+     width: 130px;
+}
+
+/* navbar not needed for how I've fixed things. */
+  ul.navbar li {
+    width: 130px;
+    text-align: center;
+    margin: auto;
+    padding-top: 18px; 
+    border-right: 4px none #46008a }
+
+ul.fakesubnavbar {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 6px; 
+        color: #ffffff; /*#600060;*/
+        margin-bottom: 4px;
+        background: #113d88;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+ul.fakesubnavbar li {
+        width: 120px;
+        text-align: left;
+        padding: 6px;
+        display: block;
+}
+
+ul.subnavbar {
+	list-style-type: none;
+	padding: 0;
+        padding-top: 4px;
+	margin: 0;
+}
+
+ul.subnavbar li {
+	width: 130px;
+	text-align: left;
+	padding: 0px;
+	margin-bottom: 4px;
+	background: #113d88;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+ul.subnavbar li a {
+	display: block;
+	width: 112px; /*118px;*/
+	padding: 6px;
+	padding-left: 12px;
+	text-decoration:none;
+}
+
+ul.subnavbar li a:link { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subnavbar li a:visited {
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subnavbar li a:hover {
+        background-color: #3A86DE;
+        /*background-color: #1f6bc2;*/
+	color: #ffffff;
+	text-decoration:none;
+	border-bottom:0px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	-webkit-transition: background 200ms ease-out;
+	-moz-transition: background 200ms ease-out;
+	-o-transition: background 200ms ease-out;
+	transition: background 200ms ease-out;
+}
+
+ul.subsubnavbar {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 88%;
+}
+
+ul.subsubnavbar li {
+        width: 95px;
+        text-align: left;
+        padding: 0px;
+        margin-left: 20px;
+	margin-bottom: 4px;
+	background-color: #113d88;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+ul.subsubnavbar li a {
+        display: block;
+        width: 80px;
+        padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+        text-decoration:none;
+}
+
+ul.subsubnavbar li a:link { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subsubnavbar li a:visited { 
+        color: #ffffff; /*#600060;*/
+        text-decoration: none; }
+
+ul.subsubnavbar li a:hover {
+        background-color: #3A86DE;
+        /*background-color: #1f6bc2;*/
+	color: #ffffff;
+        text-decoration:none;
+        border-bottom:0px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	-webkit-transition: background 200ms ease-out;
+	-moz-transition: background 200ms ease-out;
+	-o-transition: background 200ms ease-out;
+	transition: background 200ms ease-out;
+}
+
+
+/* HTML link styling */
+  a:link { color: #1f6bc2; text-decoration:none; } 
+  a:visited { color: #1f6bc2; } /*#800080;*/
+  a:hover { color: #e3a857; }
+
+.fakelink { color: #1f6bc2; }
+
+  address { text-align: center; margin-top: 13px; padding-top: 13px; border-top: thin dotted }
+
+span.codedirection { unicode-bidi:bidi-override; direction: rtl; } 
+
