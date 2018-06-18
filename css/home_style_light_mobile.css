@@ -139,12 +139,12 @@ font-family: "trebuchet ms", sans-serif;
 
 .foottext{
     float: center;
-    padding-left: 30px;
+    padding-left: 60px; /*30px;*/
 }
 .impressum{
     float: right;
     height: 3em;
-    padding-top: 10px;
+    padding-top: 3.5px;
     padding-right: 5px;
     vertical-align: center;
     font-size: 0.85em;

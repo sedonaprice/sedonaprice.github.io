@@ -214,12 +214,12 @@ h1,h2,h3 { padding-top: 0px; 	font-family: "trebuchet ms", sans-serif; }
 #footer p { margin: 4px 0 0 0;  text-align: center; }
 .foottext{
     text-align: center;
-    padding-left: 30px;
+    padding-left: 60px; /*30px;*/
 }
 .impressum{
     float: right;
     height: 35px;
-    padding-top: 10px;
+    padding-top: 3.5px;
     padding-right: 5px;
     vertical-align: center;
     font-size: 11px;
