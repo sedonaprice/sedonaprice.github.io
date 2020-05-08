@@ -1,8 +1,21 @@
 /* home_style_light_mobile.css */
 /* colors:
-#1f6bc2; dark blue
 #113d88; dark purple
 #c8b0de; light purple
+#1f6bc2; dark blue
+#113d88; darkblue navbar
+#3A86DE; lightblue navbar hover
+#0054b4; border bottom header
+#e3a857; gold / orange
+#618EC2; impressum link color
+#
+#037670; navbar
+#02b3ab; navbar hover
+#007771; border bottom header
+#23c7bf; light green link hover
+#12c 8bf; light green link hover
+#007771; dark green
+#059089; dark green
 */
 
 body,html{
@@ -31,7 +44,7 @@ body {
 #banner_mobile{
         margin: auto;
         text-align: left;
-        border-bottom: solid 4px #0054b4;
+        border-bottom: solid 4px #007771;
         background-color: #f8fafa;
         color: #313131;
         padding: 0px 0px 15px 0px;
@@ -56,7 +69,7 @@ body {
 #header {
 	margin: auto;
 	text-align: left;
-	border-bottom: solid 4px #0054b4;
+	border-bottom: solid 4px #007771;
 	background-color: #f8fafa;
 	color: #313131;
 	padding: 0px 0px 15px 0px;
@@ -122,7 +135,7 @@ font-family: "trebuchet ms", sans-serif;
     margin: auto;
     padding: 0;
     padding-top: 2px;
-    border-top: solid 2px #0054b4;
+    border-top: solid 2px #007771;
     background: #f8fafa; 
     color: #505050;
     text-align: center;
@@ -152,7 +165,7 @@ font-family: "trebuchet ms", sans-serif;
     /*font-style: normal;*/
 } 
 .impressum a:link {
-    color:#618EC2;
+    color: #059089;
 }
 
 
@@ -176,7 +189,7 @@ font.subhead { font-weight: bold; font-size: 1.15em; }
 	float: none;
 	width: 100%;
 	padding: 2px 0px;
-	background: #113d88;
+	background: #037670;
 }
 
 /* navbar not needed for how I've fixed things now */
@@ -204,7 +217,7 @@ ul.fakesubnavbar {
         padding: 0;
 	color: #ffffff;/*#600060;*/
         margin: 0px;
-        background: #113d88;
+        background: #037670;
 }
 ul.fakesubnavbar li {
         text-align: center;
@@ -229,9 +242,9 @@ ul.subnavbar li {
 }
 ul.subnavbar li a {
 	padding: 2px 8px;
-	background: #113d88;
-	border-left: solid #1f6bc2 1px;
-	border-right: solid #1f6bc2 1px;
+	background: #037670;
+	border-left: solid #059089 1px;
+	border-right: solid #059089 1px;
 	text-decoration:none;
 }
 
@@ -245,10 +258,10 @@ ul.subnavbar li a:visited {
 
 ul.subnavbar li a:hover {
 	display: inline;
-        background-color: #3A86DE;
-        /*background-color: #1f6bc2;*/
-	border-right: solid #1f6bc2 1px;
-	border-left: solid #1f6bc2 1px;
+        background-color: #02b3ab;
+        /*background-color: #059089;*/
+	border-right: solid #059089 1px;
+	border-left: solid #059089 1px;
 	color: #ffffff;
 	text-decoration:none;
 	border-bottom:0px;
@@ -273,9 +286,9 @@ ul.subsubnavbar li a {
         display: inline;
         width: auto;
 	padding: 2px 8px;
-	background: #113d88;
-	border-right: solid #1f6bc2 1px;
-	border-left: solid #1f6bc2 1px;
+	background: #037670;
+	border-right: solid #059089 1px;
+	border-left: solid #059089 1px;
         text-decoration:none;
 }
 
@@ -288,10 +301,10 @@ ul.subsubnavbar li a:visited {
         text-decoration: none; }
 
 ul.subsubnavbar li a:hover {
-        background-color: #3A86DE;
-        /*background-color: #1f6bc2;*/
-	border-right: solid #1f6bc2 1px;
-	border-left: solid #1f6bc2 1px;
+        background-color: #02b3ab;
+        /*background-color: #059089;*/
+	border-right: solid #059089 1px;
+	border-left: solid #059089 1px;
 	color: #ffffff;
         text-decoration:none;
         border-bottom:0px;
@@ -299,11 +312,11 @@ ul.subsubnavbar li a:hover {
 
 
 /* HTML links styling */
-  a:link { color: #1f6bc2; text-decoration:none; } 
-  a:visited { color: #1f6bc2; } /*#800080;*/
-  a:hover { color: #e3a857; }
+  a:link { color: #059089; text-decoration:none; } 
+  a:visited { color: #059089; } /*#800080;*/
+  a:hover { color: #23c7bf; }  /*#e3a857;*/
 
-.fakelink { color: #1f6bc2; }
+.fakelink { color: #059089; }
 
 
   address { text-align: center; margin-top: 13px; padding-top: 13px; border-top: thin dotted }

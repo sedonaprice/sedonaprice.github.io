@@ -1,8 +1,20 @@
 /* home_style_light.css */
 /* colors:
-#1f6bc2; dark blue
 #113d88; dark purple
 #c8b0de; light purple
+#1f6bc2; dark blue
+#113d88; darkblue navbar
+#3A86DE; lightblue navbar hover
+#0054b4; border bottom header
+#e3a857; gold / orange
+#
+#037670; navbar
+#02b3ab; navbar hover
+#007771; border bottom header
+#23c7bf; light green link hover
+#12c 8bf; light green link hover
+#007771; dark green
+#059089; dark green
 */
 
 body,html{
@@ -42,7 +54,7 @@ body {
 	min-height: 180px;
 	max-width: 740px;
         text-align: left;
-        border-bottom: solid 4px #0054b4;
+        border-bottom: solid 4px #007771;
         background-color: #f8fafa;
         color: #313131;
         padding: 0px 0px 25px 15px;
@@ -76,7 +88,7 @@ body {
 	/*min-width: 670px;*/
 	max-width: 740px;
         text-align: left;
-        border-bottom: solid 4px #0054b4;
+        border-bottom: solid 4px #007771;
         background-color: #f8fafa;
         color: #313131;
         padding: 0px 0px 25px 15px;
@@ -114,8 +126,8 @@ body {
 	max-width: 740px;
 	max-height: 200px;
 	text-align: left;
-	border-bottom: solid 4px #0054b4;
-	background-color: #f8fafa;/*#0054b4; */
+	border-bottom: solid 4px #007771;
+	background-color: #f8fafa;/*#007771; */
 	color: #313131;/*white;*/
 	padding: 0px 0px 15px 0px;
 	/*margin-right: 15px;*/
@@ -201,7 +213,7 @@ h1,h2,h3 { padding-top: 0px; 	font-family: "trebuchet ms", sans-serif; }
     padding: 0;
     padding-top: 2px; /*2px;*/
     padding-bottom: 4px;
-    border-top: solid 2px #0054b4;
+    border-top: solid 2px #007771;
     background: #f8fafa; 
     color: #505050; 
     text-align: center;
@@ -274,7 +286,7 @@ ul.fakesubnavbar {
 	margin-top: 6px;
 	color: #ffffff; /*#600060;*/
         margin-bottom: 4px;
-        background: #113d88;
+        background: #037670;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
@@ -298,11 +310,11 @@ ul.subnavbar li {
 	text-align: left;
 	padding: 0px;
 	margin-bottom: 4px;
-	background: #113d88;
+	background: #037670;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
-        /*border: solid 1px #113d88;*/
+        /*border: solid 1px #037670;*/
 }
 
 ul.subnavbar li a {
@@ -322,7 +334,7 @@ ul.subnavbar li a:visited {
 	text-decoration: none; }
 
 ul.subnavbar li a:hover {
-        background-color: #3A86DE;
+        background-color: #02b3ab;
 	color: #ffffff;
 	text-decoration:none;
 	border-bottom:0px;
@@ -338,7 +350,7 @@ ul.subnavbar li a:hover {
 /* EXPERIMENTAL */
 /*ul.subnavbar li a:hover {
 	background-color: #f8fafa;
-	color: #113d88;
+	color: #037670;
 	text-decoration:none;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -358,7 +370,7 @@ ul.subsubnavbar li {
         padding: 0px;
 	margin-left: 20px;
 	margin-bottom: 4px;
-	background-color: #113d88;
+	background-color: #037670;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
@@ -383,8 +395,8 @@ ul.subsubnavbar li a:visited {
 	text-decoration: none; }
 
 ul.subsubnavbar li a:hover {
-        background-color: #3A86DE;
-        /*background-color: #1f6bc2;*/
+        background-color: #02b3ab;
+        /*background-color: #059089;*/
 	color: #ffffff;
         text-decoration:none;
         border-bottom:0px;
@@ -399,11 +411,11 @@ ul.subsubnavbar li a:hover {
 
 
 /* HTML links styling */
-  a:link { color: #1f6bc2; text-decoration:none; } 
-  a:visited { color: #1f6bc2; } /*#800080;*/
-  a:hover { color: #e3a857; }
+  a:link { color: #059089; text-decoration:none; } 
+  a:visited { color: #059089; } /*#800080;*/
+  a:hover { color: #23c7bf; }  /*#e3a857;*/
 
-.fakelink { color: #1f6bc2; }
+.fakelink { color: #059089; }
 
 /* li styling */
 
