@@ -42,3 +42,25 @@ hover: border-bottom: solid 2px #46008a /
 
 */
 
+************************************
+The colors now used: 2020-05-08
+
+background color: 
+content background: #f8f8f8 ;#e6e3ec ; #E7E2F1
+footer text: #505050
+
+
+navbar background color: #113d88
+navbar link color: #ffffff
+navbar hover: #3A86DE
+navbar hover text: #ffffff
+
+
+links:
+link: #1f6bc2 / 
+visited: #1f6bc2 /
+hover: #23c7bf; 
+
+border: #0054b5 
+
+*/
