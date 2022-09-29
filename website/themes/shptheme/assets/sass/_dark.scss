@@ -1,0 +1,129 @@
+// Necessary imports
+@use "sass:color";
+@use "core" as *;
+@use "../../../../node_modules/bootstrap/scss/functions" as *; // Required
+
+//////////////////////////////////////////////
+// Color system
+//
+
+//////////////////////////////////////////////
+// Set primary
+$default-primary--dark:   $sp-primary;     // Border color from current website
+
+// Tints / shades of primary:
+$primary-100--dark: tint-color($default-primary--dark, 80%) !default;
+$primary-113--dark: tint-color($default-primary--dark, 77%) !default;
+$primary-125--dark: tint-color($default-primary--dark, 75%) !default;
+$primary-150--dark: tint-color($default-primary--dark, 70%) !default;
+$primary-200--dark: tint-color($default-primary--dark, 60%) !default;
+$primary-250--dark: tint-color($default-primary--dark, 50%) !default;
+$primary-300--dark: tint-color($default-primary--dark, 40%) !default;
+$primary-400--dark: tint-color($default-primary--dark, 20%) !default;
+$primary-500--dark: $default-primary--dark !default;
+$primary-600--dark: shade-color($default-primary--dark, 20%) !default;
+$primary-700--dark: shade-color($default-primary--dark, 40%) !default;
+$primary-750--dark: shade-color($default-primary--dark, 50%) !default;
+$primary-800--dark: shade-color($default-primary--dark, 60%) !default;
+$primary-812--dark: shade-color($default-primary--dark, 62%) !default;
+$primary-825--dark: shade-color($default-primary--dark, 65%) !default;
+$primary-850--dark: shade-color($default-primary--dark, 70%) !default;
+$primary-875--dark: shade-color($default-primary--dark, 75%) !default;
+$primary-900--dark: shade-color($default-primary--dark, 80%) !default;
+
+// Make muted versions:
+$primary-750-muted--dark: color.adjust($primary-750--dark,$saturation:-15%) !default;
+$primary-850-muted--dark: color.adjust($primary-850--dark,$lightness:2%, $saturation:-45%) !default;
+$primary-825-muted--dark: color.adjust($primary-825--dark,$lightness:2%, $saturation:-45%) !default;
+$primary-300-muted--dark: color.adjust($primary-300--dark,$lightness:-10%, $saturation:-10%) !default;
+$primary-400-muted--dark: color.adjust($primary-400--dark,$lightness:-15%, $saturation:-10%) !default;
+$primary-500-muted--dark: color.adjust($primary-500--dark,$saturation:-45%) !default;
+$primary-800-muted--dark: color.adjust($primary-800--dark,$lightness:7%, $saturation:-55%) !default;
+$primary-812-muted--dark: color.adjust($primary-812--dark,$lightness:5%, $saturation:-45%) !default;
+$primary-775-muted--dark: color.adjust($primary-700--dark,$lightness:3%, $saturation:-45%) !default;
+$primary-600-muted--dark: color.adjust($primary-600--dark,$saturation:-45%) !default;
+$primary-200-muted--dark: color.adjust($primary-200--dark,$lightness:-10%, $saturation:-10%) !default;
+$primary-500-very-muted--dark: color.adjust($primary-500--dark,$saturation:-60%) !default;
+$primary-400-less-muted--dark: color.adjust($primary-400--dark,$lightness:-10%, $saturation:-10%) !default;
+
+// Use a darkened primary
+$primary--dark:    $primary-750-muted--dark !default;
+
+// // Defaults from bootstrap:
+$light--dark:        $gray-310 !default;  //$gray-100 !default;
+$dark--dark:          $gray-900 !default;
+
+$fw-normal--dark:    400 !default; // 500 !default;
+
+// General
+$text-color--dark:    $light--dark;
+
+$bg-color--dark:      $primary-825-muted--dark; //$primary-850-muted--dark;
+$bg-body-color--dark: $bg-color--dark; //$primary-850-muted--dark;
+
+
+
+$cd-hd-bg-color--dark: $primary-200-muted--dark; //$dark--dark;\
+// $cd-hd-color--dark:    $dark--dark; //$text-color--dark;
+$cd-hd-color--dark:    black;
+// $cd-bd-bg-color--dark: $primary-800-muted--dark; //$dark--dark;
+$cd-bd-bg-color--dark: $primary-812-muted--dark;
+$cd-border-color--dark: $primary-500-very-muted--dark; // #505050; //#aeaeae;
+$cd-shadow-color--dark: $primary-400-less-muted--dark; //#cacaca;
+
+
+// Links
+$l-color--dark:        color.adjust($sp-blue-link,$saturation:50%, $lightness:13%) !default;
+// $l-hover-color--dark:  color.adjust($sp-teal-link,$saturation:-5%) !default;
+$l-hover-color--dark:  color.adjust($sp-gold-link,$saturation:-5%) !default;
+
+// Sidebar
+$sb-color--dark:                 $primary-200--dark;
+$sb-color-emph--dark:            $light--dark;
+$sb-color-muted--dark:           $primary-400-muted--dark; //$primary-300-muted--dark; //$primary-200--dark;
+
+// Footer
+$f-bg-color--dark:           $bg-color--dark;
+$f-color--dark:              $primary-300-muted--dark;
+$f-border-color--dark:       $primary-500-muted--dark;
+$f-hover-color--dark:        $primary-200--dark;
+$f-up-bg-color--dark:        $primary-775-muted--dark; //$primary-800-muted--dark;
+$f-up-bg-hover-color--dark:  $primary-600-muted--dark;
+
+// Navbar
+$nb-bg-color--dark:                       $primary-800-muted--dark;
+$nb-color--dark:                          $light--dark;
+$nb-l--dark:                              rgba($white, 0.6);
+$nb-l-hover--dark:                        $light--dark;
+$nb-l-disabled--dark:                     rgba($white, 0.4);
+$nb-l-active--dark:                       $light--dark;
+$nb-toggler-color--dark:                  rgba($white, 0.25);
+$nb-dd-color--dark:                 $gray-500;
+$nb-dd-border-color--dark:          $gray-800;
+$nb-dd-bg--dark:                    $gray-900;
+$nb-dd-l-color--dark:            $gray-300;   // bootstrap default
+$nb-dd-l-active-color--dark:     $gray-300; // bootstrap default
+$nb-dd-l-active-bg--dark:        $gray-200;
+$nb-dd-l-hover-color--dark:      $gray-300;
+$nb-dd-l-hover-bg--dark:         $gray-800; // bootstrap default
+$nb-dd-l-disabled-color--dark:   $gray-600;
+$nb-dd-divider-color--dark:         $gray-800;
+
+
+$nb-icon-color--dark:                     $nb-l--dark;
+$nb-icon-select-color--dark:              $l-hover-color--dark;
+$nb-icon-active-color--dark:              #f25bd0; //#e55592; //orange;
+
+$toggler-url-rgba-string--dark: "255, 255, 255, 0.75";
+
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+
+$toggler-url-prefix--dark: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28";
+$toggler-url-suffix--dark: "%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e";
+// $toggler-url-prefix--dark: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28";
+// $toggler-url-suffix--dark: "%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e";
+$toggler-url--dark: url($toggler-url-prefix--dark + $toggler-url-rgba-string--dark + $toggler-url-suffix--dark);

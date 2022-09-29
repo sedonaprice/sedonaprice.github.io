@@ -1,0 +1,96 @@
+// Import functions
+// Need bootstrap functions for using map-loop, etc
+@use "sass:color";
+@use "../../../../node_modules/bootstrap/scss/functions" as *; // Required
+
+
+//////////////////////////////////////////////
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// $variable-prefix:             sp- !default;
+
+//////////////////////////////
+// Toggle global options
+$enable-gradients: false;
+$enable-shadows: true;
+
+//////////////////////////////
+// Fonts
+$font-size-small:       0.85rem;
+
+//////////////////////////////
+// Links
+$link-decoration:               none; //underline dotted; //underline;
+$link-fw:                       425 !default;
+
+//////////////////////////////
+// Layout values:
+// $max-sidebar-width:             400px;
+// $max-main-content-width:        1000px;
+// $left-pane-percentage:          33.33333%;
+// $max-side-photo-width:          270px;
+
+$max-sidebar-width:             320px;
+$max-main-content-width:        1000px;
+$left-pane-percentage:          30%; //33.33333%;
+$max-side-photo-width:          250px;
+
+
+$custom-settings: (
+  "link-decoration":          $link-decoration,
+  "link-fw":                  $link-fw,
+  "font-size-small":          $font-size-small,
+  "max-sidebar-width":        $max-sidebar-width,
+  "max-main-content-width":   $max-main-content-width,
+  "left-pane-percentage":     $left-pane-percentage,
+  "max-side-photo-width":     $max-side-photo-width,
+) !default;
+
+
+
+
+//////////////////////////////////////////////
+// Colors
+//
+$sp-primary:       #113d88 !default;     // Navbar color from current website
+
+$sp-blue-link:     #1f6bc2 !default;
+$sp-teal-link:     #23c7bf !default;
+$sp-gold-link:     #deab00 !default; //#e2ae00 !default; //#dba900 !default; //#ffc107 !default;
+// $sp-gold-link--light:    #dba900 !default;
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// Additions
+$gray-50:       #fafbfc !default;
+$gray-150: tint-color($gray-500, 88%) !default;
+$gray-310: tint-color($gray-500, 55%) !default;
+$gray-450: tint-color($gray-500, 40%) !default;
+$gray-550: shade-color($gray-500, 7.5%) !default;
+
+//////////////////////////////////////////////
+
+// Grid breakpoints -- using Bootstrap defaults
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;

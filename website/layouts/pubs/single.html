@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+
+<h3>All Publications /
+<a href='{{ "publications2.html" | relURL }}'>1st &amp; 2nd Author Publications</a> </h3>
+
+
+<!-- Allow mechanism for a "foreword" -->
+{{ .Content }}
+
+
+<div class="p-2 pt-3 padded-list">
+{{ with .Site.GetPage "/pubs/publications1" }}{{ .Content }}{{ end }}
+</div>
+
+
+{{ end }}

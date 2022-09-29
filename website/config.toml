@@ -1,0 +1,38 @@
+baseURL = 'https://sedonaprice.github.io/'
+languageCode = 'en-us'
+title = "Sedona Price"
+theme = "shptheme"
+relativeURLS = true
+publishdir = "./public/"
+
+
+uglyurls = true
+disableKinds = ["sitemap", "taxonomy", "taxonomyTerm", "category", "RSS"]
+
+
+
+ignoreFiles = ['teaching.md$']
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[module]
+[[module.mounts]]
+  source = "node_modules/dark-mode-toggle/src/dark-mode-toggle.mjs"
+  target = "static/js/dark-mode-toggle.mjs"
+
+
+[menu]
+[[menu.main]]
+  identifier = 'cv'
+  title = 'CV'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/shprice-cv-web.pdf'
+  weight = 9000
+
+# [[menu.main]]
+#   identifier = 'other'
+#   title = 'Other'
+#   pre = "<i class='fa fa-heart'></i>"
+#   url = ''
+#   weight = 10000

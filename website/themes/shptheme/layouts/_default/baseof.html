@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+      <main>
+        <div class="container-fluid p-0">
+          <!-- Sidebar -->
+          {{- partial "sidebar.html" . -}}
+
+          <!-- Right side -->
+          <div class="col p-0 right-pane" id="right-pane">
+
+            {{- partial "navbar.html" . -}}
+
+            <!-- Main content -->
+            <div class="p-5 pb-md-4 text-left main-content" id="main">
+              {{- block "main" . }}{{- end }}
+            </div>
+
+            <!-- Footer -->
+            {{- partial "footer.html" . -}}
+
+          </div>
+
+        </div>
+
+      </main>
+
+      {{- partial "scripts.html" . -}}
+
+    </body>
+</html>

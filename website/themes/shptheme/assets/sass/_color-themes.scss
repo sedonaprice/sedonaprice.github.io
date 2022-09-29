@@ -1,0 +1,137 @@
+// Implementing color theme switch solution from:
+// https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
+
+// Imports
+@use "sass:color";
+@use "../../../../node_modules/bootstrap/scss/functions" as *; // Required
+@use "light" as *;
+@use "dark" as *;
+
+
+
+$themes: (
+  default: (
+    "primary":                          $primary--light,
+    "light":                            $light--light,
+    "dark":                             $dark--light,
+    "color":                            $text-color--light,
+    "fw-normal":                        $fw-normal--light,
+    "bg-color":                         $bg-color--light,
+    "bg-body-color":                    $bg-body-color--light,
+    "cd-hd-bg-color":                   $cd-hd-bg-color--light,
+    "cd-hd-color":                      $cd-hd-color--light,
+    "cd-bd-bg-color":                   $cd-bd-bg-color--light,
+    "cd-shadow-color":                  $cd-shadow-color--light,
+    "cd-border-color":                  $cd-border-color--light,
+    "l-color":                          $l-color--light,
+    "l-hover-color":                    $l-hover-color--light,
+    "sb-color":                         $sb-color--light,
+    "sb-color-emph":                    $sb-color-emph--light,
+    "sb-color-muted":                   $sb-color-muted--light,
+    "f-bg-color":                       $f-bg-color--light,
+    "f-color":                          $f-color--light,
+    "f-border-color":                   $f-border-color--light,
+    "f-hover-color":                    $f-hover-color--light,
+    "f-up-bg-color":                    $f-up-bg-color--light,
+    "f-up-bg-hover-color":              $f-up-bg-hover-color--light,
+    "nb-bg-color":                      $nb-bg-color--light,
+    "nb-color":                         $nb-color--light,
+    "nb-l":                             $nb-l--light,
+    "nb-l-hover":                       $nb-l-hover--light,
+    "nb-l-disabled":                    $nb-l-disabled--light,
+    "nb-l-active":                      $nb-l-active--light,
+    "nb-toggler-color":                 $nb-toggler-color--light,
+    "nb-dd-color":                      $nb-dd-color--light,
+    "nb-dd-border-color":               $nb-dd-border-color--light,
+    "nb-dd-bg":                         $nb-dd-bg--light,
+    "nb-dd-l-color":                 $nb-dd-l-color--light,
+    "nb-dd-l-active-color":          $nb-dd-l-active-color--light,
+    "nb-dd-l-active-bg":             $nb-dd-l-active-bg--light,
+    "nb-dd-l-hover-color":           $nb-dd-l-hover-color--light,
+    "nb-dd-l-hover-bg":              $nb-dd-l-hover-bg--light,
+    "nb-dd-l-disabled-color":        $nb-dd-l-disabled-color--light,
+    "nb-dd-divider-color":              $nb-dd-divider-color--light,
+    "nb-icon-color":                    $nb-icon-color--light,
+    "nb-icon-select-color":             $nb-icon-select-color--light,
+    "nb-icon-active-color":             $nb-icon-active-color--light,
+    "nb-toggler-image":                 $toggler-url--light,
+  ),
+  dark: (
+    "primary":                          $primary--dark,
+    "light":                            $light--dark,
+    "dark":                             $dark--dark,
+    "color":                            $text-color--dark,
+    "fw-normal":                        $fw-normal--dark,
+    "bg-color":                         $bg-color--dark,
+    "bg-body-color":                    $bg-body-color--dark,
+    "cd-hd-bg-color":                   $cd-hd-bg-color--dark,
+    "cd-hd-color":                      $cd-hd-color--dark,
+    "cd-bd-bg-color":                   $cd-bd-bg-color--dark,
+    "cd-shadow-color":                  $cd-shadow-color--dark,
+    "cd-border-color":                  $cd-border-color--dark,
+    "l-color":                          $l-color--dark,
+    "l-hover-color":                    $l-hover-color--dark,
+    "sb-color":                         $sb-color--dark,
+    "sb-color-emph":                    $sb-color-emph--dark,
+    "sb-color-muted":                   $sb-color-muted--dark,
+    "f-bg-color":                       $f-bg-color--dark,
+    "f-color":                          $f-color--dark,
+    "f-border-color":                   $f-border-color--dark,
+    "f-hover-color":                    $f-hover-color--dark,
+    "f-up-bg-color":                    $f-up-bg-color--dark,
+    "f-up-bg-hover-color":              $f-up-bg-hover-color--dark,
+    "nb-bg-color":                      $nb-bg-color--dark,
+    "nb-color":                         $nb-color--dark,
+    "nb-l":                             $nb-l--dark,
+    "nb-l-hover":                       $nb-l-hover--dark,
+    "nb-l-disabled":                    $nb-l-disabled--dark,
+    "nb-l-active":                      $nb-l-active--dark,
+    "nb-toggler-color":                 $nb-toggler-color--dark,
+    "nb-dd-color":                      $nb-dd-color--dark,
+    "nb-dd-border-color":               $nb-dd-border-color--dark,
+    "nb-dd-bg":                         $nb-dd-bg--dark,
+    "nb-dd-l-color":                 $nb-dd-l-color--dark,
+    "nb-dd-l-active-color":          $nb-dd-l-active-color--dark,
+    "nb-dd-l-active-bg":             $nb-dd-l-active-bg--dark,
+    "nb-dd-l-hover-color":           $nb-dd-l-hover-color--dark,
+    "nb-dd-l-hover-bg":              $nb-dd-l-hover-bg--dark,
+    "nb-dd-l-disabled-color":        $nb-dd-l-disabled-color--dark,
+    "nb-dd-divider-color":              $nb-dd-divider-color--dark,
+    "nb-icon-color":                    $nb-icon-color--dark,
+    "nb-icon-select-color":             $nb-icon-select-color--dark,
+    "nb-icon-active-color":             $nb-icon-active-color--dark,
+    "nb-toggler-image":                 $toggler-url--dark,
+  ),
+) !default;
+
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    @if $theme == 'default'  {
+      & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+    @else {
+      .#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

@@ -1,0 +1,107 @@
+  <!-- sticky-top -->
+<nav class="navbar navbar-expand-md sticky-top d-flex">
+  <div class="container-fluid">
+    <div class="d-flex d-md-none ps-2 me-auto mt-2 align-self-center">
+        <h1>Sedona Price</h1>
+    </div>
+
+
+
+    <button class="navbar-toggler ms-md-auto align-self-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav me-auto d-flex flex-grow-1">
+
+        <li class="nav-item">
+          <a class="nav-link{{ if .IsHome }} active{{ end }}" {{if .IsHome }}aria-current="page"{{ end }} href="{{ .Site.Home.Permalink }}">Home</a>
+        </li>
+
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main.ByWeight }}
+
+          <!--  Don't add dropdown for the fake submenu for pubs-all vs pubs-key -->
+          {{ if and (.HasChildren) (ne .Name "Publications") }}
+            <li class="nav-item dropdown" data-dropdown="dropdown">
+              <a class='nav-link dropdown-toggle{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}' href="#"
+                id="navbarDropdownOther" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 {{ .Title }}
+              </a>
+
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownOther">
+                {{ range .Children }}
+                  <li>
+                    <a class='dropdown-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}' href="{{ absURL .URL }}">
+                      {{ .Title }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </li>
+
+          {{ else }}
+          <li class="nav-item">
+            <a class='nav-link{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}'
+              href="{{ absURL .URL }}">
+               {{ .Title }}
+            </a>
+          </li>
+          {{ end }}
+
+        {{ end }}
+
+
+      <!-- Theme collapse -->
+      <!-- Light/dark icons: bootstrap icons -->
+      <!-- Auto icon: modification combining two bootstrap icons -->
+      <div class="d-flex ms-md-auto">
+        <div class="dropstart">
+          <div type="button" data-bs-toggle="dropdown" data-bs-target="#themeToggler" aria-expanded="false" aria-controls="themeToggler">
+                <div class="d-flex theme-list" title="Select theme">
+                  <div class="theme-list-item" id="theme-list-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" alt="Select theme">
+                      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                    </svg>
+                  </div>
+                  <div class="theme-list-item" id="theme-list-dark">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="bi"  viewBox="0 0 16 16" alt="Select theme">
+                        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                      </svg>
+                  </div>
+                </div>
+          </div>
+
+          <div class="dropdown-menu theme-select" id="themeToggler">
+            <div class="d-flex">
+              <div class="select-item" id="select-light" title="Light theme">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" alt="Light theme">
+                  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                </svg>
+              </div>
+              <div class="select-item" id="select-dark" title="Dark theme">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" alt="Dark theme">
+                  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                </svg>
+              </div>
+              <div class="select-item" id="select-auto" title="Auto theme">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" alt="Auto theme">
+                <path d="M 5.6707785,11.610233 A 0.43965472,0.43965472 0 0 1 6.1508011,11.496521 4.1263427,4.1263427 0 0 0 8.182213,11.71859 C 10.4617,11.398229 12.046348,9.2805317 11.724473,6.9902731 11.682486,6.6915191 11.610442,6.4050822 11.511638,6.1339685 a 0.45053159,0.45053159 0 0 1 0.114604,-0.4843624 0.41961837,0.41961837 0 0 1 0.508708,-0.05357 4.7795277,4.7795277 0 0 1 2.261818,3.43279 C 14.764056,11.642217 12.9561,14.054907 10.361985,14.419486 8.4095957,14.693876 6.5665584,13.730811 5.6169921,12.124203 a 0.43049524,0.43049524 0 0 1 0.053786,-0.51397 z" />
+                  <path d="m 7.8964844,4 a 4,4 0 0 0 -1.4296875,0.3046875 4.0000074,4.0000074 0 0 0 -2.1367188,5.28125 h -0.00195 a 0.50000091,0.50000091 0 0 0 0.060547,0.1289063 0.50000091,0.50000091 0 0 0 0.00195,0.00391 0.50000091,0.50000091 0 0 0 0.7441406,0.083984 L 9.7402344,5.1953125 v -0.00391 A 0.5,0.5 0 0 0 9.7617188,5.1738281 0.5,0.5 0 0 0 9.9257812,4.8046875 0.5,0.5 0 0 0 9.8886719,4.6152344 0.5,0.5 0 0 0 9.6640625,4.3632812 4,4 0 0 0 8.0644531,4 4,4 0 0 0 7.8964844,4 Z" />
+                  <path d="M 2.9003906,9.6054688 A 0.5,0.5 0 0 0 2.7265625,9.6425781 L 0.87890625,10.408203 A 0.50000091,0.50000091 0 0 0 1.2617188,11.332031 L 3.109375,10.566406 A 0.5,0.5 0 0 0 3.3808594,9.9140625 0.5,0.5 0 0 0 2.9003906,9.6054688 Z" />
+                  <path d="M 1.046875,4.6269531 A 0.5,0.5 0 0 0 0.87890625,5.5917969 L 2.7265625,6.3574219 A 0.5,0.5 0 0 0 3.3808594,6.0878906 0.5,0.5 0 0 0 3.109375,5.4335938 L 1.2617188,4.6679688 A 0.5,0.5 0 0 0 1.046875,4.6269531 Z" />
+                  <path d="M 10.875,0.5703125 A 0.5,0.5 0 0 0 10.408203,0.87890625 L 9.6425781,2.7265625 A 0.5003755,0.5003755 0 0 0 10.566406,3.1113281 L 11.332031,1.2617188 A 0.5,0.5 0 0 0 11.0625,0.609375 0.5,0.5 0 0 0 10.875,0.5703125 Z" />
+                  <path d="M 5.1113281,0.5703125 A 0.5,0.5 0 0 0 4.9394531,0.609375 0.5,0.5 0 0 0 4.6679688,1.2617188 L 5.4335938,3.109375 A 0.50000094,0.50000094 0 0 0 6.3574219,2.7265625 L 5.5917969,0.87890625 A 0.5,0.5 0 0 0 5.1113281,0.5703125 Z" />
+                  <path d="M 14.986328,0.75 A 0.25,0.25 0 0 0 14.822266,0.8222656 L 0.82226562,14.822266 a 0.25,0.25 0 0 0 0,0.355468 0.25,0.25 0 0 0 0.35546878,0 L 15.177734,1.1777344 a 0.25,0.25 0 0 0 0,-0.35546878 A 0.25,0.25 0 0 0 14.986328,0.75 Z" />
+              </svg>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</nav>

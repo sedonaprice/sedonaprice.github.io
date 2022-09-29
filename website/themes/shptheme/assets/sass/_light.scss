@@ -1,0 +1,122 @@
+// Necessary imports
+@use "sass:color";
+@use "core" as *;
+@use "../../../../node_modules/bootstrap/scss/functions" as *; // Required
+
+//////////////////////////////////////////////
+// Color system
+//
+
+//////////////////////////////////////////////
+// Set primary
+$default-primary--light:       $sp-primary;     // Border color from current website
+
+// Tints / shades of primary:
+$primary-25--light: tint-color($default-primary--light, 94%) !default;
+$primary-50--light: tint-color($default-primary--light, 88%) !default;
+$primary-100--light: tint-color($default-primary--light, 80%) !default;
+$primary-125--light: tint-color($default-primary--light, 75%) !default;
+$primary-150--light: tint-color($default-primary--light, 70%) !default;
+$primary-200--light: tint-color($default-primary--light, 60%) !default;
+$primary-300--light: tint-color($default-primary--light, 40%) !default;
+$primary-400--light: tint-color($default-primary--light, 20%) !default;
+$primary-500--light: $default-primary--light !default;
+$primary-600--light: shade-color($default-primary--light, 20%) !default;
+$primary-700--light: shade-color($default-primary--light, 40%) !default;
+$primary-750--light: shade-color($default-primary--light, 50%) !default;
+$primary-800--light: shade-color($default-primary--light, 60%) !default;
+$primary-900--light: shade-color($default-primary--light, 80%) !default;
+
+// Muted / lightened:
+$primary-750-muted--light: color.adjust($primary-750--light,$lightness:6%,$saturation:-40%) !default;
+$primary-500-lightened--light: color.adjust($primary-500--light,$lightness:2%,$saturation:-8%) !default;
+$primary-200-lightened--light: color.adjust($primary-100--light,$lightness:5%,$saturation:5%) !default;
+$primary-100-lightened--light: color.adjust($primary-100--light,$lightness:10%,$saturation:10%) !default;
+$primary-150-lightened--light: color.adjust($primary-100--light,$lightness:5%,$saturation:10%) !default;
+$primary-175-lightened--light: color.adjust($primary-100--light,$lightness:2.5%,$saturation:10%) !default;
+$primary-50-muted--light: color.adjust($primary-50--light,$lightness:-5%, $saturation:-20%) !default;
+$primary-25-muted--light: color.adjust($primary-25--light,$lightness:-2%, $saturation:-20%) !default;
+$primary-150-muted--light: color.adjust($primary-150--light,$lightness:6%,$saturation:-10%) !default;
+$primary-15-muted--light: color.adjust($primary-25--light,$lightness:2%, $saturation:-20%) !default;
+
+
+// Primary
+$primary--light:   $primary-500-lightened--light;
+
+// Defaults from bootstrap:
+$light--light:         $gray-100 !default;
+$dark--light:          $gray-900 !default;
+
+$fw-normal--light:     400 !default;
+
+// General
+$text-color--light:    $dark--light;
+$bg-color--light:      $primary-25-muted--light; // #f8fafa; //$gray-200; //$primary-50--light; //$gray-50;
+$bg-body-color--light: $bg-color--light;
+
+
+$cd-hd-bg-color--light: $primary-15-muted--light; //$light--light;
+// $cd-hd-color--light:    $text-color--light;
+$cd-hd-color--light:   black; 
+$cd-bd-bg-color--light: $primary-150-muted--light; //$gray-300;
+$cd-border-color--light: #aeaeae;
+$cd-shadow-color--light: #cacaca;
+
+// Links
+$l-color--light:        $sp-blue-link !default;
+// $l-hover-color--light:  $sp-gold-link !default;
+// $l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-7%) !default;
+$l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-9%) !default;
+// $l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-11%) !default;
+
+// Sidebar
+$sb-color--light:                 $primary-150--light;
+$sb-color-emph--light:            $primary-25--light;
+$sb-color-muted--light:           $primary-400--light; //$primary-300--light; // $primary-200--light;
+
+// Footer
+$f-bg-color--light:           $bg-color--light;
+$f-color--light:              $gray-550;
+$f-border-color--light:       $gray-300;
+$f-hover-color--light:        $gray-700;
+$f-up-bg-color--light:        $primary-150-lightened--light; //$primary-100-lightened--light;
+$f-up-bg-hover-color--light:  $primary-175-lightened--light; //$primary-150-lightened--light;
+
+// Navbar
+$nb-bg-color--light:                       $primary-750-muted--light;
+$nb-color--light:                          $light--light;
+$nb-l--light:                              rgba($white, 0.8);
+$nb-l-hover--light:                        $white;
+$nb-l-disabled--light:                     rgba($white, 0.5);
+$nb-l-active--light:                       $white;
+$nb-toggler-color--light:                  rgba($white, 0.25);
+$nb-dd-color--light:                 $dark--light;
+$nb-dd-border-color--light:          rgba($black, 0.15); // bootstrap default
+$nb-dd-bg--light:                    $gray-50;
+$nb-dd-l-color--light:            $dark--light;   // bootstrap default
+$nb-dd-l-active-color--light:     $dark--light; // bootstrap default
+$nb-dd-l-active-bg--light:        $light--light;
+$nb-dd-l-hover-color--light:      shade-color($dark--light, 10%);  // bootstrap default
+$nb-dd-l-hover-bg--light:         $primary-200-lightened--light;
+
+$nb-dd-l-disabled-color--light:   $gray-200;
+$nb-dd-divider-color--light:         rgba($black, 0.15);
+
+$nb-icon-color--light:                     $nb-l--light;
+$nb-icon-select-color--light:              $l-hover-color--light;
+$nb-icon-active-color--light:              #f25bd0; //#e55592; //orange;
+
+
+$toggler-url-rgba-string--light: "255, 255, 255, 0.75";
+
+
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+$toggler-url-prefix--light: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28";
+$toggler-url-suffix--light: "%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e";
+// $toggler-url-prefix--light: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28";
+// $toggler-url-suffix--light: "%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e";
+$toggler-url--light: url($toggler-url-prefix--light + $toggler-url-rgba-string--light + $toggler-url-suffix--light);

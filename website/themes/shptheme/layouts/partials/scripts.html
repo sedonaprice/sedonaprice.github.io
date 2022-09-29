@@ -1,0 +1,16 @@
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<!-- JavaScript and dependencies -->
+{{ $externals := slice "react" "react-dom" }}
+{{ $defines := dict "process.env.NODE_ENV" `"development"` }}
+{{ $opts := dict "targetPath" "js/main.js" "externals" $externals "defines" $defines }}
+{{ $built := resources.Get "js/main.js" | js.Build $opts }}
+<script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+
+
+
+<!-- Modified version of dark-mode-toggle, as mounted in config.toml -->
+<script type="module" src="js/dark-mode-toggle.mjs" defer></script>

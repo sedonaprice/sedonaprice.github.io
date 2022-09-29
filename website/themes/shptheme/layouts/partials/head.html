@@ -1,0 +1,41 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sedona Price" />
+    <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
+    <meta name="theme-color" content="#0054b4" />
+    <meta name="author" content="S. H. Price">
+    <title>{{ .Site.Title }}{{ if .IsHome }} -- Home{{ else }}{{ if .Page.Title }} -- {{ .Page.Title }}{{ end }}{{ end }}</title>
+
+    <!-- Stylesheets -->
+     <!-- "outputStyle" "compressed" -->
+    {{ $options := (dict "targetPath" "css/main.css"  "transpiler" "dartsass" "outputStyle" "compressed") }}
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+
+
+    <!-- The main stylesheet -->
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <!-- Favicons -->
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <script>
+      if (
+        (!('color-theme' in sessionStorage))
+      ) {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } else if (
+        (sessionStorage.getItem('color-theme') === 'dark')
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+
+</head>

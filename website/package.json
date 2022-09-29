@@ -1,0 +1,14 @@
+{
+  "name": "website_hugo_bootstrap",
+  "version": "1.0.0",
+  "description": "Sedona Price's website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sedona Price",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
