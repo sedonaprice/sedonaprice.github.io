@@ -6,6 +6,9 @@ on:
       - main  # Set a branch to deploy
   pull_request:
 
+env:
+  DART_SASS_VERSION: 1.55.0
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,6 +30,7 @@ jobs:
       - name: Unpack Embedded Dart Sass v${{ env.DART_SASS_VERSION }}
         run: |
           tar -xvf sass_embedded-${{ env.DART_SASS_VERSION }}-linux-x64.tar.gz
+          sass_embedded/dart-sass-embedded --version
       - name: Add to the PATH
         run: echo "$GITHUB_WORKSPACE/sass_embedded" >> $GITHUB_PATH
       - name: Build
