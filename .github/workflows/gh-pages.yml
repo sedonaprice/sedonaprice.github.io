@@ -21,6 +21,15 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      # From https://www.brycewray.com/posts/2022/05/using-dart-sass-hugo-github-actions-edition/
+      - name: Download Embedded Dart Sass v${{ env.DART_SASS_VERSION }}
+        run: curl -LJO https://github.com/sass/dart-sass-embedded/releases/download/${{ env.DART_SASS_VERSION }}/sass_embedded-${{ env.DART_SASS_VERSION }}-linux-x64.tar.gz
+      - name: Unpack Embedded Dart Sass v${{ env.DART_SASS_VERSION }}
+        run: |
+          tar -xvf sass_embedded-${{ env.DART_SASS_VERSION }}-linux-x64.tar.gz
+          sass_embedded/dart-sass-embedded --version
+      - name: Add to the PATH
+        run: echo "$GITHUB_WORKSPACE/sass_embedded" >> $GITHUB_PATH
       - name: Build
         working-directory: website/
         run: hugo --minify
@@ -30,4 +39,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: website/public
+          production-branch: 'main'
+          publish_dir: 'website/public'
