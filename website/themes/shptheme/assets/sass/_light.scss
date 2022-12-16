@@ -52,6 +52,8 @@ $fw-normal--light:     400 !default;
 // General
 $text-color--light:    $dark--light;
 $bg-color--light:      $primary-25-muted--light; // #f8fafa; //$gray-200; //$primary-50--light; //$gray-50;
+// $bg-color--light:      color.adjust($primary-25-muted--light, $alpha:-0.2); 
+
 $bg-body-color--light: $bg-color--light;
 
 
@@ -66,8 +68,10 @@ $cd-shadow-color--light: #cacaca;
 $l-color--light:        $sp-blue-link !default;
 // $l-hover-color--light:  $sp-gold-link !default;
 // $l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-7%) !default;
-$l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-9%) !default;
 // $l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-11%) !default;
+// $l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-9%) !default;
+
+$l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-11%) !default;
 
 // Sidebar
 $sb-color--light:                 $primary-150--light;

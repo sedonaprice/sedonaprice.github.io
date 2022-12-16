@@ -25,6 +25,15 @@
   @include themed() {
     color: t("nb-l");
   }
+  // font-weight:250;
+  font-weight:300;
+
+  -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  
+
 }
 .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link:focus {
   @include themed() {
@@ -40,7 +49,8 @@
   @include themed() {
     color: t("nb-l-active");
   }
-  font-weight:600;
+  // font-weight:600;
+  font-weight:450;
 }
 .navbar .navbar-toggler {
   @include themed() {
@@ -54,12 +64,12 @@
 }
 .navbar h1 {
   font-size: calc(1.0rem + 2.75vw);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.05;
 }
 .navbar h2 {
   font-size: calc(1.0rem + 2.75vw);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.05;
 }
 
@@ -100,7 +110,8 @@
   }
 }
 .navbar .navbar-nav .dropdown-item.active{
-  font-weight:600;
+  // font-weight:600;
+  font-weight:450;
   background-color: transparent;
   @include themed() {
     color: t("nb-dd-l-active-color");

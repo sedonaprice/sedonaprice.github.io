@@ -35,12 +35,25 @@ main {
   }
 }
 
+main h2, h3 {
+  font-weight: 350; 
+}
+
+
+
 a {
   @include themed() {
     color: t("l-color");
   }
   text-decoration: $link-decoration;
   font-weight: $link-fw;
+
+  -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-style 0.2s ease-in-out;
+  
+  
 }
 a:hover {
   @include themed() {
@@ -87,6 +100,7 @@ a:hover {
   margin-bottom: 0.1rem;
   font-size: min(calc(0.925rem + 2.3vw), 2.6rem);
   font-weight: 350;
+  // font-weight: 300;
   line-height: 1.1;
   @include themed() {
     color: t('sb-color-emph');
@@ -96,14 +110,16 @@ a:hover {
 .sp-sidebar h2 {
   text-align: center;
   font-size: min(calc(0.46rem + 1.5vw), 1.55rem);
-  font-weight: 380;
+  // font-weight: 380;
+  font-weight: 300;
   line-height: 1.0;
   padding-bottom: 0.2rem;
 }
 .sp-sidebar h3 {
   text-align: center;
   font-size: min(calc(0.3rem + 1.1vw), 1.1rem);
-  font-weight: 380;
+  // font-weight: 380;
+  font-weight: 300;
 }
 
 
@@ -161,7 +177,8 @@ a:hover {
 
 .footer {
   font-size: $font-size-small;
-  font-weight: 350;
+  // font-weight: 350;
+  font-weight: 250;
   @include themed() {
     color: t("f-color");
   }

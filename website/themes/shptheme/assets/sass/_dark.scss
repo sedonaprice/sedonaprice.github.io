@@ -53,7 +53,8 @@ $primary--dark:    $primary-750-muted--dark !default;
 $light--dark:        $gray-310 !default;  //$gray-100 !default;
 $dark--dark:          $gray-900 !default;
 
-$fw-normal--dark:    400 !default; // 500 !default;
+// $fw-normal--dark:    400 !default; // 500 !default;
+$fw-normal--dark:    250 !default; // 500 !default;
 
 // General
 $text-color--dark:    $light--dark;
@@ -74,7 +75,11 @@ $cd-shadow-color--dark: $primary-400-less-muted--dark; //#cacaca;
 
 // Links
 // $l-color--dark:        color.adjust($sp-blue-link,$saturation:50%, $lightness:13%) !default;
-$l-color--dark:        color.adjust($sp-blue-link,$saturation:48%, $lightness:15%) !default;
+// $l-color--dark:        color.adjust($sp-blue-link,$saturation:48%, $lightness:15%) !default;
+
+$l-color--dark:        color.adjust($sp-blue-link,$saturation:-15%, $lightness:15%) !default;
+
+
 // $l-hover-color--dark:  color.adjust($sp-teal-link,$saturation:-5%) !default;
 $l-hover-color--dark:  color.adjust($sp-gold-link,$saturation:-5%) !default;
 
