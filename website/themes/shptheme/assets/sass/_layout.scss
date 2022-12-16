@@ -39,7 +39,15 @@ main h2, h3 {
   font-weight: 350; 
 }
 
+ins {
+  text-decoration: underline;
+  text-decoration-thickness: 0.085rem; 
+}
 
+
+main strong {
+  font-weight: 520; 
+}
 
 a {
   @include themed() {
