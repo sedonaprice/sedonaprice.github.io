@@ -107,8 +107,8 @@ $nb-dd-l-disabled-color--light:   $gray-200;
 $nb-dd-divider-color--light:         rgba($black, 0.15);
 
 $nb-icon-color--light:                     $nb-l--light;
-$nb-icon-select-color--light:              $l-hover-color--light;
-$nb-icon-active-color--light:              #f25bd0; //#e55592; //orange;
+$nb-icon-select-color--light:              color.adjust($l-hover-color--light,$saturation:5%, $lightness:15%) !default;//$l-hover-color--light;
+$nb-icon-active-color--light:             color.adjust($sp-blue-link,$saturation:5%, $lightness:15%) !default; // #f25bd0; //#e55592; //orange;
 
 
 $toggler-url-rgba-string--light: "255, 255, 255, 0.75";

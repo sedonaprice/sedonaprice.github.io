@@ -117,8 +117,8 @@ $nb-dd-divider-color--dark:         $gray-800;
 
 
 $nb-icon-color--dark:                     $nb-l--dark;
-$nb-icon-select-color--dark:              $l-hover-color--dark;
-$nb-icon-active-color--dark:              #f25bd0; //#e55592; //orange;
+$nb-icon-select-color--dark:              color.adjust($l-hover-color--dark,$saturation:-15%, $lightness:15%) !default;//$l-hover-color--dark;
+$nb-icon-active-color--dark:             $l-color--dark; // #f25bd0; //#e55592; //orange;
 
 $toggler-url-rgba-string--dark: "255, 255, 255, 0.75";
 
