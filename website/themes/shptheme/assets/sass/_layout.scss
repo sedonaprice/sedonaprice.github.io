@@ -69,9 +69,30 @@ a:hover {
   }
 }
 
+
+.padded-list {
+  // padding-top: 1rem !important;
+  padding-top: 0.25rem !important;
+}
+
+.padded-list ol {
+  counter-reset: reversed(list-item);
+}
+
 .padded-list li {
 	padding-bottom:10px;
   line-height: normal;
+}
+
+
+.student-led {
+  padding-top: -1rem; 
+  font-weight: 250; 
+  font-style: italic; 
+  padding-bottom: 0.35rem; 
+  @include themed() {
+    color: t("text-color-note")
+  }
 }
 
 

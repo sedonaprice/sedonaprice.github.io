@@ -55,6 +55,7 @@ $themes: (
     "nb-icon-select-color":             $nb-icon-select-color--light,
     "nb-icon-active-color":             $nb-icon-active-color--light,
     "nb-toggler-image":                 $toggler-url--light,
+    "text-color-note":              $text-color-note--light, 
   ),
   dark: (
     "primary":                          $primary--dark,
@@ -101,6 +102,7 @@ $themes: (
     "nb-icon-select-color":             $nb-icon-select-color--dark,
     "nb-icon-active-color":             $nb-icon-active-color--dark,
     "nb-toggler-image":                 $toggler-url--dark,
+    "text-color-note":              $text-color-note--dark, 
   ),
 ) !default;
 
