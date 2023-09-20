@@ -111,6 +111,57 @@ a:hover {
   }
 }
 
+// body.is-preload #sidebar:before {
+//   background-color: #000000;
+// }
+
+body #header > * {
+  opacity: 0;
+}
+
+#sidebar:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar {
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar:before {
+  // background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../images/overlay.png");
+  @include themed() {
+    background-image: linear-gradient(to top, rgba(19, 21, 25, 0.0), 1%, t("primary")), url("../images/overlay.png");
+  }
+  background-size: auto,
+256px 256px;
+  background-position: center,
+center;
+  background-repeat: no-repeat,
+repeat;
+  z-index: -1;
+}
+
+#sidebar{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../images/UNCOVER_nircam_mosaic.png'); 
+  // background-image: url('images/shp_crop.jpg'); 
+  // z-index: -2; 
+}
+// style="background-image: url('images/UNCOVER_nircam_mosaic.png')" 
+// style="background-image: url('images/UNCOVER_nircam_mosaic.png')" 
 
 .sp-sidebar .sp-side-photo {
   width: min($max-side-photo-width, 100%);

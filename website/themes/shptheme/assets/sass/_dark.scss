@@ -32,17 +32,20 @@ $primary-875--dark: shade-color($default-primary--dark, 75%) !default;
 $primary-900--dark: shade-color($default-primary--dark, 80%) !default;
 
 // Make muted versions:
-$primary-750-muted--dark: color.adjust($primary-750--dark,$saturation:-15%) !default;
-$primary-850-muted--dark: color.adjust($primary-850--dark,$lightness:2%, $saturation:-45%) !default;
-$primary-825-muted--dark: color.adjust($primary-825--dark,$lightness:2%, $saturation:-45%) !default;
+$primary-200-muted--dark: color.adjust($primary-200--dark,$lightness:-10%, $saturation:-10%) !default;
+$primary-250-muted--dark: color.adjust($primary-250--dark,$lightness:-10%, $saturation:-10%) !default;
 $primary-300-muted--dark: color.adjust($primary-300--dark,$lightness:-10%, $saturation:-10%) !default;
 $primary-400-muted--dark: color.adjust($primary-400--dark,$lightness:-15%, $saturation:-10%) !default;
 $primary-500-muted--dark: color.adjust($primary-500--dark,$saturation:-45%) !default;
+$primary-600-muted--dark: color.adjust($primary-600--dark,$saturation:-45%) !default;
+$primary-750-muted--dark: color.adjust($primary-750--dark,$saturation:-15%) !default;
+$primary-775-muted--dark: color.adjust($primary-700--dark,$lightness:3%, $saturation:-45%) !default;
 $primary-800-muted--dark: color.adjust($primary-800--dark,$lightness:7%, $saturation:-55%) !default;
 $primary-812-muted--dark: color.adjust($primary-812--dark,$lightness:5%, $saturation:-45%) !default;
-$primary-775-muted--dark: color.adjust($primary-700--dark,$lightness:3%, $saturation:-45%) !default;
-$primary-600-muted--dark: color.adjust($primary-600--dark,$saturation:-45%) !default;
-$primary-200-muted--dark: color.adjust($primary-200--dark,$lightness:-10%, $saturation:-10%) !default;
+$primary-825-muted--dark: color.adjust($primary-825--dark,$lightness:2%, $saturation:-45%) !default;
+$primary-850-muted--dark: color.adjust($primary-850--dark,$lightness:2%, $saturation:-45%) !default;
+
+
 $primary-500-very-muted--dark: color.adjust($primary-500--dark,$saturation:-60%) !default;
 $primary-400-less-muted--dark: color.adjust($primary-400--dark,$lightness:-10%, $saturation:-10%) !default;
 
@@ -86,7 +89,8 @@ $l-hover-color--dark:  color.adjust($sp-gold-link,$saturation:-5%) !default;
 // Sidebar
 $sb-color--dark:                 $primary-200--dark;
 $sb-color-emph--dark:            $light--dark;
-$sb-color-muted--dark:           $primary-400-muted--dark; //$primary-300-muted--dark; //$primary-200--dark;
+// $sb-color-muted--dark:           $primary-400-muted--dark; //$primary-300-muted--dark; //$primary-200--dark;
+$sb-color-muted--dark:           $primary-250-muted--dark; //$primary-300-muted--dark; //$primary-200--dark;
 
 // Footer
 $f-bg-color--dark:           $bg-color--dark;

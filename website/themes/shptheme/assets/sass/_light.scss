@@ -18,6 +18,7 @@ $primary-100--light: tint-color($default-primary--light, 80%) !default;
 $primary-125--light: tint-color($default-primary--light, 75%) !default;
 $primary-150--light: tint-color($default-primary--light, 70%) !default;
 $primary-200--light: tint-color($default-primary--light, 60%) !default;
+$primary-250--light: tint-color($default-primary--light, 50%) !default;
 $primary-300--light: tint-color($default-primary--light, 40%) !default;
 $primary-400--light: tint-color($default-primary--light, 20%) !default;
 $primary-500--light: $default-primary--light !default;
@@ -76,7 +77,9 @@ $l-hover-color--light:   color.adjust($sp-gold-link,$saturation:-11%) !default;
 // Sidebar
 $sb-color--light:                 $primary-150--light;
 $sb-color-emph--light:            $primary-25--light;
-$sb-color-muted--light:           $primary-400--light; //$primary-300--light; // $primary-200--light;
+// $sb-color-muted--light:           $primary-400--light; //$primary-300--light; // $primary-200--light;
+$sb-color-muted--light:           $primary-250--light; //$primary-300--light; // $primary-200--light;
+
 
 // Footer
 $f-bg-color--light:           $bg-color--light;
