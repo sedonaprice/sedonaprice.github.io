@@ -13,11 +13,18 @@
     {{ $options := (dict "targetPath" "css/main.css"  "transpiler" "dartsass" "outputStyle" "compressed") }}
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
 
-
+  
     <!-- The main stylesheet -->
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <!-- Favicons -->
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <link rel="preload" as="image" href="images/UNCOVER_nircam_mosaic.png">
+    <link rel="preload" as="image" href="images/shp_crop.jpg">
+    
+    {{ if in .Page.Title "Research"}}
+    <link rel="preload" as="image" href="images/heavymetallogo.png">
+    {{ end }}
 
     <script>
       if (
