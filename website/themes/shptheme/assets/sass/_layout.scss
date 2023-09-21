@@ -132,9 +132,8 @@ a:hover {
 }
 
 #sidebar:before {
-  // background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../images/overlay.png");
   @include themed() {
-    background-image: linear-gradient(to top, rgba(19, 21, 25, 0.0), 1%, t("primary")), url("../images/overlay.png");
+    background-image: linear-gradient(to top, rgba(19, 21, 25, 0.0), 1%, t("primary"));
   }
   background-size: auto,
 256px 256px;
