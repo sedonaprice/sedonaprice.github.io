@@ -225,7 +225,7 @@ repeat;
 .right-pane {
   display: flex;
   flex-direction: column;
-  overflow-y: overlay;
+  // overflow-y: overlay;
   min-height: 100vh;
   @include media-breakpoint-up(md) {
     margin-left: min($max-sidebar-width, $left-pane-percentage);
@@ -290,29 +290,29 @@ repeat;
   }
 }
 
-.footer .bi {
-  width: 1.6rem;
-  height: 1.6rem;
-  padding: 0.25rem;
-  border-radius: 0.3rem;
-  margin-top: 0;
-  margin-bottom: 0;
+// .footer .bi {
+//   width: 1.6rem;
+//   height: 1.6rem;
+//   padding: 0.25rem;
+//   border-radius: 0.3rem;
+//   margin-top: 0;
+//   margin-bottom: 0;
 
-  fill: currentColor;
-  stroke: currentColor;
-  stroke-width: 0.5px;
-  @include themed() {
-    background-color: t("f-up-bg-color");
-  }
-}
+//   fill: currentColor;
+//   stroke: currentColor;
+//   stroke-width: 0.5px;
+//   @include themed() {
+//     background-color: t("f-up-bg-color");
+//   }
+// }
 
-.footer .bi:hover{
-    @include themed() {
-      fill: t("f-hover-color");
-      stroke: t("f-hover-color");
-      background-color: t("f-up-bg-hover-color");
-    }
-  }
+// .footer .bi:hover{
+//     @include themed() {
+//       fill: t("f-hover-color");
+//       stroke: t("f-hover-color");
+//       background-color: t("f-up-bg-hover-color");
+//     }
+//   }
 
 
 .survey-card {
@@ -480,3 +480,82 @@ repeat;
     padding-top: 0.5rem;
     margin-bottom: 0;
 }
+
+
+
+.goToTop {
+  // background-color: lime; 
+  /* background-color: #ff00ff;  */
+  /* bottom: 1rem; 
+  right: 1rem;  */
+  // border-radius: 0.3rem;
+  bottom: 0.65rem; 
+  right: 0; 
+  margin-right: $spacer * 0.75;
+  margin-top: 0;
+  margin-bottom: 0;
+  // width: 1.6rem;
+  // height: 1.6rem;
+  // padding: 0.25rem;
+  /* right: 2rem;  */
+  /*left: calc(50vw + 25.5rem);*/
+  z-index:10; 
+  width: 1.5rem; 
+  height: 1.5rem; 
+  // border-radius: 4px;
+  position: fixed; 
+  display: none; 
+  // @include themed() {
+  //   stroke: t("f-color");
+  //   fill: t("f-color");
+  //   background-color: t("f-up-bg-color");
+  // }
+}
+
+.goToTop .svg {
+  border-radius: 0.3rem;
+  padding: 0.25rem;
+  /* padding: 0 0.1rem 2rem 0.1rem;  */
+  /* margin: 0.2rem;  */
+  @include themed() {
+    stroke: t("f-color");
+    fill: t("f-color");
+    background-color: t("f-up-bg-color");
+  }
+}
+
+.goToTop .svg:hover{
+  @include themed() {
+    fill: t("f-hover-color");
+    stroke: t("f-hover-color");
+    background-color: t("f-up-bg-hover-color");
+  }
+}
+
+.goToTop a {
+  border-bottom-width: 0; 
+}
+
+.goToTop a:hover {
+  @include themed() {
+    color: t("f-hover-color");
+  }
+}
+
+.goToTop svg {
+  display: block; 
+}
+
+
+.goToTop svg path {
+
+  // @include themed() {
+  //   stroke: t("f-color");
+  //   fill: t("f-color");
+  // }
+  /* stroke: #00ffff;  */
+  // stroke-width: 0.05rem; 
+  stroke-width: 0.03rem; 
+  // stroke-width: 0.5px;
+}
+
