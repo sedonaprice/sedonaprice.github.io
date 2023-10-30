@@ -1,7 +1,20 @@
 // Website Styling
 
+html {
+  min-height: -webkit-fill-available;
+  overscroll-behavior: none;
+}
 
 body {
+  // min-height: 100vh;
+  // min-height: -webkit-fill-available;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;  
   min-height: 100vh;
   min-height: -webkit-fill-available;
   @include media-breakpoint-down(md) {
@@ -16,18 +29,12 @@ body {
   }
 }
 
-
-html {
-  height: -webkit-fill-available;
-  overscroll-behavior: none;
-}
-
 main {
   display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
-  height: 100%;
-  height: -webkit-fill-available;
+  min-height: 100vh;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
 
   @include themed() {
     background-color: t("bg-color")!important;
