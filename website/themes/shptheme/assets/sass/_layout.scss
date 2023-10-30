@@ -2,15 +2,8 @@
 
 
 body {
-  // min-height: 100vh;
-  // min-height: -webkit-fill-available;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   @include media-breakpoint-down(md) {
     @include themed() {
       background-color: rgba(t("primary"), 0.95);
@@ -25,37 +18,15 @@ body {
 
 
 html {
-  // height: -webkit-fill-available;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overscroll-behavior: none;
+  height: -webkit-fill-available;
 }
 
-// main {
-//   display: flex;
-//   flex-wrap: nowrap;
-//   height: 100vh;
-//   height: 100%;
-//   height: -webkit-fill-available;
-
-//   @include themed() {
-//     background-color: t("bg-color")!important;
-//     color: t("color")!important;
-//     font-weight: t("fw-normal")!important;
-//   }
-// }
-
 main {
-  // display: flex;
-  // flex-wrap: nowrap;
-  // height: 100vh;
-  // height: 100%;
-  // height: -webkit-fill-available;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  height: 100%;
+  height: -webkit-fill-available;
 
   @include themed() {
     background-color: t("bg-color")!important;
@@ -63,19 +34,6 @@ main {
     font-weight: t("fw-normal")!important;
   }
 }
-
-
-main:before, main:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
 
 main h2, h3 {
   font-weight: 350; 
@@ -144,30 +102,15 @@ a:hover {
   height: 100vh;
   height: 100%;
   height: -webkit-fill-available;
-  // overflow-y: auto;
+  overflow-y: auto;
   max-width: min($max-sidebar-width, $left-pane-percentage);
   font-size: min(calc(0.3rem + 0.95vw), 1rem);
   @include themed() {
-    // background-color: t("primary");
+    background-color: t("primary");
     color: t("sb-color");
   }
 }
 
-#sidebar {
-  content: '';
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100%;
-  height: -webkit-fill-available;
-  max-width: min($max-sidebar-width, $left-pane-percentage);
-  background-position: center; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('../images/UNCOVER_nircam_mosaic.png'); 
-}
 
 #sidebar:before {
   content: '';
@@ -177,6 +120,18 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#sidebar {
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar:before {
   @include themed() {
     background-image: linear-gradient(to top, rgba(19, 21, 25, 0.0), 1%, t("primary"));
   }
@@ -189,66 +144,24 @@ repeat;
   z-index: -1;
 }
 
-
-// #sidebar:before {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   @include themed() {
-//     background-image: linear-gradient(to top, rgba(19, 21, 25, 0.0), 1%, t("primary"));
-//   }
-//   background-size: auto,
-// 256px 256px;
-//   background-position: center,
-// center;
-//   background-repeat: no-repeat,
-// repeat;
-//   z-index: -1;
-// }
-
-
-
-// #sidebar{
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-image: url('../images/UNCOVER_nircam_mosaic.png'); 
-//   // background-image: url('images/shp_crop.jpg'); 
-//   // z-index: -2; 
-// }
+#sidebar{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../images/UNCOVER_nircam_mosaic.png'); 
+  // background-image: url('images/shp_crop.jpg'); 
+  // z-index: -2; 
+}
 // style="background-image: url('images/UNCOVER_nircam_mosaic.png')" 
 // style="background-image: url('images/UNCOVER_nircam_mosaic.png')" 
 
-
-
-
-// .sp-sidebar .sp-side-photo {
-//   width: min($max-side-photo-width, 100%);
-//   margin-top: 1.5rem;
-//   margin-bottom: 1rem;
-//   margin-left: 2rem;
-//   margin-right: 2rem;
-// }
-
-
-.sp-side-photo {
+.sp-sidebar .sp-side-photo {
   width: min($max-side-photo-width, 100%);
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
-
-.sp-side-photo:before {
-  background-image: none;
-  opacity: 0;
-}
-
-
 
 .sp-sidebar hr {
   margin: 1rem 0;
@@ -311,17 +224,13 @@ repeat;
 
 .right-pane {
   display: flex;
-  // display: block; 
-  // position: absolute; 
   flex-direction: column;
   // overflow-y: overlay;
-  min-height: 100%; 
   min-height: 100vh;
   @include media-breakpoint-up(md) {
     margin-left: min($max-sidebar-width, $left-pane-percentage);
   }
 }
-
 
 .main-content {
   display: flex;
