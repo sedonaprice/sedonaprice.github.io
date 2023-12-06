@@ -16,6 +16,9 @@ ignoreFiles = ['teaching.md$']
 [markup.goldmark.renderer]
 unsafe= true
 
+[markup.goldmark.parser.attribute]
+block = true
+
 [module]
 [[module.mounts]]
   source = "node_modules/dark-mode-toggle/src/dark-mode-toggle.mjs"
