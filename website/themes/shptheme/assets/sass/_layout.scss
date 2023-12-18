@@ -404,6 +404,14 @@ repeat;
     }
 }
 
+.survey-card .survey-card-header h2 {
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.7rem;
+  @include themed() {
+      color: t("cd-hd-color");
+  }
+}
 
 .survey-card .code-card-header {
     display: flex;
