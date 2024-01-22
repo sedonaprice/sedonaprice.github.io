@@ -32,6 +32,7 @@ $primary-875--dark: shade-color($default-primary--dark, 75%) !default;
 $primary-900--dark: shade-color($default-primary--dark, 80%) !default;
 
 // Make muted versions:
+$primary-150-muted--dark: color.adjust($primary-150--dark,$lightness:-5%, $saturation:-5%) !default;
 $primary-200-muted--dark: color.adjust($primary-200--dark,$lightness:-10%, $saturation:-10%) !default;
 $primary-250-muted--dark: color.adjust($primary-250--dark,$lightness:-10%, $saturation:-10%) !default;
 $primary-300-muted--dark: color.adjust($primary-300--dark,$lightness:-10%, $saturation:-10%) !default;
@@ -68,7 +69,7 @@ $bg-body-color--dark: $bg-color--dark; //$primary-850-muted--dark;
 
 
 
-$cd-hd-bg-color--dark: $primary-200-muted--dark; //$dark--dark;\
+$cd-hd-bg-color--dark: $primary-150-muted--dark;  //$primary-200-muted--dark; //$dark--dark;\
 // $cd-hd-color--dark:    $dark--dark; //$text-color--dark;
 $cd-hd-color--dark:    black;
 // $cd-bd-bg-color--dark: $primary-800-muted--dark; //$dark--dark;
