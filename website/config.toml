@@ -7,7 +7,7 @@ publishdir = "./public/"
 
 
 uglyurls = true
-disableKinds = ["sitemap", "taxonomy", "taxonomyTerm", "category", "RSS"]
+disableKinds = ["sitemap", "taxonomy", "RSS"]
 
 
 
