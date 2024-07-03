@@ -50,7 +50,8 @@ main h2, h3 {
 #main .zindex-top {
   z-index: 100; 
 }
-#main h3 {
+
+#main h3.addmargintop {
   @include media-breakpoint-down(md) {
     padding-top: 4.5rem;  
   }
