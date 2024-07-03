@@ -173,6 +173,41 @@ repeat;
   margin-right: 2rem;
 }
 
+
+#sp-side-photo {
+  content: '';
+  // width: min($max-side-photo-width, 100%);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  // content: '';
+  display: block;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  // min-height:200px; 
+  // min-width:200px; 
+  width: min($max-side-photo-width, 100%);
+  // height: min($max-side-photo-width, 100%);
+  aspect-ratio: 1 / 1;
+}
+
+
+#sp-side-photo {
+  width: min($max-side-photo-width, 100%);
+  height: min($max-side-photo-width, 100%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-image: url('../images/shp_crop.jpg');
+  background-image: url('../images/price_photo_rebalance.jpg');
+  // z-index: -2; 
+}
+
+
+
 .sp-sidebar hr {
   margin: 1rem 0;
   width: 100%;
