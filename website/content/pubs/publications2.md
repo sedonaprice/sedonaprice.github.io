@@ -1,5 +1,5 @@
 +++
-title =  "1st & 2nd Author Publications"
+title =  "1st & 2nd Author and Student-led Publications"
 draft = false
 headless = true
 +++
