@@ -132,6 +132,19 @@
 }
 
 
+.dropstart#themeSelect {
+  @include media-breakpoint-down(md) {
+    .dropdown-menu {
+      right: auto; 
+      left: 100%; 
+      margin-left: .125rem; 
+      margin-right: 0; 
+    }
+  }
+}
+
+
+
 .theme-list, .theme-select{
   user-select:none;
   padding-left: 0.25rem;
