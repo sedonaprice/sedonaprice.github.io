@@ -1,16 +1,14 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: github pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches:
-      - main  # Set a branch to deploy
-
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-env:
-  DART_SASS_VERSION: 1.63.0
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -18,10 +16,11 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 # Default to bash
 defaults:
@@ -29,40 +28,42 @@ defaults:
     shell: bash
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.137.1
     steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      # From https://www.brycewray.com/posts/2022/05/using-dart-sass-hugo-github-actions-edition/
-      - name: Download Embedded Dart Sass v${{ env.DART_SASS_VERSION }}
-        run: curl -LJO https://github.com/sass/dart-sass-embedded/releases/download/${{ env.DART_SASS_VERSION }}/sass_embedded-${{ env.DART_SASS_VERSION }}-linux-x64.tar.gz
-
-      - name: Unpack Embedded Dart Sass v${{ env.DART_SASS_VERSION }}
+      - name: Install Hugo CLI
         run: |
-          tar -xvf sass_embedded-${{ env.DART_SASS_VERSION }}-linux-x64.tar.gz
-          sass_embedded/dart-sass-embedded --version
-
-      - name: Add to the PATH
-        run: echo "$GITHUB_WORKSPACE/sass_embedded" >> $GITHUB_PATH
-
-      - name: Build
-        working-directory: website/
-        run: hugo --minify
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          path: website/public
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: America/Los_Angeles
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
 
   # Deployment job
   deploy:
@@ -74,4 +75,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
+
