@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  DART_SASS_VERSION: 1.55.0
+  DART_SASS_VERSION: 1.63.0
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
