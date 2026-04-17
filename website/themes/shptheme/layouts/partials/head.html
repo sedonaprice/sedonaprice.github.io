@@ -11,7 +11,7 @@
     <!-- Stylesheets -->
      <!-- "outputStyle" "compressed" -->
     {{ $options := (dict "targetPath" "css/main.css"  "transpiler" "dartsass" "outputStyle" "compressed") }}
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+    {{ $style := resources.Get "sass/main.scss" | css.Sass $options }}
 
   
     <!-- The main stylesheet -->
