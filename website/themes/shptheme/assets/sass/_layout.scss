@@ -423,6 +423,7 @@ repeat;
 
 .survey-card .survey-card-header {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     border-top-left-radius: 0.2rem;
@@ -475,6 +476,7 @@ repeat;
 
 .survey-card .code-card-header {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     border-top-left-radius: 0.2rem;
